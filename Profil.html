@@ -22,9 +22,10 @@
 
     /* CSS UNTUK MENU NAVIGASI DI POJOK KANAN ATAS */
     .nav-menu {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
+      z-index:999;
     }
 
     .nav-menu a {
@@ -32,11 +33,12 @@
       color: #2e7d32;
       font-weight: bold;
       margin-left: 10px;
-      font-size: 13px;
+      font-size: 15px;
       background: white;
-      padding: 5px 10px;
+      padding: 8px 15px;
       border-radius: 5px;
-      border: 1px solid #2e7d32;
+      border: 2px solid #2e7d32;
+      box-shadow:0 4px 8px rgba (0,0,0,0.2);
     }
 
     .nav-menu a:hover {
@@ -102,4 +104,5 @@
   </div>
 
 </body>
+
 </html>
