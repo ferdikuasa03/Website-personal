@@ -2,26 +2,111 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8">
-  <title>Riwayat Pendidikan</title>
+  <title>Riwayat Pendidikan - Ferdi</title>
   <style>
-    body { font-family: Arial, sans-serif; background-color: #45c07ce8; padding: 20px; }
-    .card { background: white; max-width: 600px; margin: auto; padding: 20px; border-radius: 10px; }
-    /* Mengatur tipe list menjadi angka Romawi kecil */
-    ol { list-style-type: lower-roman;}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #45c07ce8;
+      padding: 20px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.9);
+      max-width: 750px; /* Sedikit dilebarkan agar muat dengan foto */
+      margin: auto;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* BARU: CSS untuk membuat daftar dan foto berjejer */
+    .pendidikan-container {
+      display: flex; /* Mengaktifkan mode Flexbox */
+      justify-content: space-between; /* Membuat jarak di antara keduanya */
+      align-items: flex-start; /* Memposisikan dari atas */
+      gap: 20px; /* Jarak antara teks dan foto */
+    }
+
+    .pendidikan-text {
+      flex: 1; /* Memberi ruang utama untuk teks */
+    }
+
+    .pendidikan-photo {
+      flex-shrink: 0; /* Mencegah foto menciut */
+      width: 250px; /* Lebar foto (sesuaikan keinginanmu) */
+    }
+
+    .pendidikan-photo img {
+      width: 100%; /* Mengisi kontainer foto */
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Mengatur tipe list menjadi angka Romawi kecil sesuai instruksi */
+    ol {
+      type: i;
+      padding-left: 20px;
+    }
+
+    ol li {
+      margin-bottom: 8px;
+    }
+
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 25px;
+      text-decoration: none;
+      color: #2e7d32;
+      font-weight: bold;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Responsif untuk HP agar foto pindah ke bawah */
+    @media (max-width: 650px) {
+      .pendidikan-container {
+        flex-direction: column; /* Menumpuk ke bawah */
+        align-items: center;
+      }
+      .pendidikan-photo {
+        width: 100%;
+        margin-bottom: 15px;
+      }
+    }
   </style>
 </head>
 <body>
+
   <div class="card">
     <h2>Riwayat Pendidikan</h2>
-    <ol>
-      <li>SD Negeri Kalemago (2011 - 2017)</li>
-      <li>SMP Negeri 1 Lore Timur (2017 - 2020)</li>
-      <li>SMA Negeri 1 Lore Utara (2020 - 2023)</li>
-      <li>S1 Informatika - UHN Sugriwa Denpasar (Sekarang)</li>
-    </ol>
-    <br>
-    <a href="index.html">Kembali ke Profil</a>
-  </div>
-</body>
 
+    <div class="pendidikan-container">
+      
+      <div class="pendidikan-text">
+        <ol>
+          <li>SD Negeri Kalemago (2011 - 2017)</li>
+          <li>SMP Negeri 1 Lore Timur (2017 - 2020)</li>
+          <li>SMA Negeri 1 Lore Utara (2020 - 2023)</li>
+          <li>S1 Informatika - UHN Sugriwa Denpasar (Sekarang)</li>
+        </ol>
+      </div>
+
+      <div class="pendidikan-photo">
+        <img src="foto_pendidikan.jpg" 
+          alt="Foto Sekolah/Ferdi">
+      </div>
+
+    </div> <a href="index.html" class="back-link">Kembali ke Profil</a>
+  </div>
+
+</body>
 </html>
