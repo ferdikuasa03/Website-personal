@@ -12,7 +12,7 @@
 
     .card {
       background: rgba(255, 255, 255, 0.9);
-      max-width: 750px; /* Sedikit dilebarkan agar muat dengan foto */
+      max-width: 750px;
       margin: auto;
       padding: 20px;
       border-radius: 10px;
@@ -24,31 +24,31 @@
       margin-bottom: 20px;
     }
 
-    /* BARU: CSS untuk membuat daftar dan foto berjejer */
+   
     .pendidikan-container {
-      display: flex; /* Mengaktifkan mode Flexbox */
-      justify-content: space-between; /* Membuat jarak di antara keduanya */
-      align-items: flex-start; /* Memposisikan dari atas */
-      gap: 20px; /* Jarak antara teks dan foto */
+      display: flex; 
+      justify-content: space-between; 
+      align-items: flex-start;
+      gap: 20px; 
     }
 
     .pendidikan-text {
-      flex: 1; /* Memberi ruang utama untuk teks */
+      flex: 1; 
     }
 
     .pendidikan-photo {
-      flex-shrink: 0; /* Mencegah foto menciut */
-      width: 100px; /* Lebar foto (sesuaikan keinginanmu) */
+      flex-shrink: 0; 
+      width: 100px;
     }
 
     .pendidikan-photo img {
-      width: 100%; /* Mengisi kontainer foto */
+      width: 100%; 
       height: auto;
       border-radius: 10px;
       box-shadow: 2px 2px 8px rgba(0,0,0,0.2);
     }
 
-    /* Mengatur tipe list menjadi angka Romawi kecil sesuai instruksi */
+    
     ol {
         list-style-type: lower-roman; 
       padding-left: 20px;
@@ -71,10 +71,10 @@
       text-decoration: underline;
     }
 
-    /* Responsif untuk HP agar foto pindah ke bawah */
+    
     @media (max-width: 650px) {
       .pendidikan-container {
-        flex-direction: column; /* Menumpuk ke bawah */
+        flex-direction: column; 
         align-items: center;
       }
       .pendidikan-photo {
@@ -110,4 +110,5 @@
 </body>
 
 </html>
+
 
